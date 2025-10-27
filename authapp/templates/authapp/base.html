@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% block title %}BillDeck{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BillDeck - Invoice and Billing Management System">
+    <meta name="author" content="BillDeck">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/apple-touch-icon.png' %}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+    <!-- Tabler Icon CSS -->
+    <link rel="stylesheet" href="{% static 'plugins/tabler-icons/tabler-icons.min.css' %}">
+
+    <!-- Iconsax CSS -->
+    <link rel="stylesheet" href="{% static 'css/iconsax.css' %}">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    {% block extra_css %}{% endblock %}
+</head>
+
+<body class="bg-white">
+    <!-- Begin Wrapper -->
+    <div class="main-wrapper auth-bg">
+        <!-- Start Content -->
+        <div class="container-fuild">
+            <div class="w-100 overflow-hidden position-relative flex-wrap d-block vh-100">
+                <!-- start row -->
+                <div class="row justify-content-center align-items-center vh-100 overflow-auto flex-wrap">
+                    <div class="col-lg-4 mx-auto">
+                        {% block content %}{% endblock %}
+                    </div>
+                </div>
+                <!-- end row -->
+            </div>
+        </div>
+        <!-- End Content -->
+    </div>
+    <!-- End Wrapper -->
+
+    <!-- jQuery -->
+    <script src="{% static 'js/jquery-3.7.1.min.js' %}"></script>
+
+    <!-- Bootstrap Core JS -->
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Custom JS -->
+    <script src="{% static 'js/script.js' %}"></script>
+
+    {% block extra_js %}{% endblock %}
+</body>
+</html>
